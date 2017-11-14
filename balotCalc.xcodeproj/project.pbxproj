@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0472321FBABD5000288901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472311FBABD5000288901 /* AppDelegate.swift */; };
+		0C0472341FBABD5000288901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472331FBABD5000288901 /* ViewController.swift */; };
+		0C0472371FBABD5100288901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0472351FBABD5100288901 /* Main.storyboard */; };
+		0C04723A1FBABD5100288901 /* balotCalc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472381FBABD5100288901 /* balotCalc.xcdatamodeld */; };
+		0C04723C1FBABD5100288901 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C04723B1FBABD5100288901 /* Assets.xcassets */; };
+		0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */; };
+		0C04724A1FBABD5100288901 /* balotCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472491FBABD5100288901 /* balotCalcTests.swift */; };
+		0C0472551FBABD5100288901 /* balotCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472541FBABD5100288901 /* balotCalcUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C0472461FBABD5100288901 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C0472261FBABD5000288901 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C04722D1FBABD5000288901;
+			remoteInfo = balotCalc;
+		};
+		0C0472511FBABD5100288901 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C0472261FBABD5000288901 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C04722D1FBABD5000288901;
+			remoteInfo = balotCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C04722E1FBABD5000288901 /* balotCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = balotCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0472311FBABD5000288901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C0472331FBABD5000288901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C0472361FBABD5100288901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C0472391FBABD5100288901 /* balotCalc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = balotCalc.xcdatamodel; sourceTree = "<group>"; };
+		0C04723B1FBABD5100288901 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C04723E1FBABD5100288901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C0472401FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0472451FBABD5100288901 /* balotCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = balotCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0472491FBABD5100288901 /* balotCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balotCalcTests.swift; sourceTree = "<group>"; };
+		0C04724B1FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0472501FBABD5100288901 /* balotCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = balotCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C0472541FBABD5100288901 /* balotCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balotCalcUITests.swift; sourceTree = "<group>"; };
+		0C0472561FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C04722B1FBABD5000288901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C0472421FBABD5100288901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C04724D1FBABD5100288901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0472251FBABD5000288901 = {
+			isa = PBXGroup;
+			children = (
+				0C0472301FBABD5000288901 /* balotCalc */,
+				0C0472481FBABD5100288901 /* balotCalcTests */,
+				0C0472531FBABD5100288901 /* balotCalcUITests */,
+				0C04722F1FBABD5000288901 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0C04722F1FBABD5000288901 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C04722E1FBABD5000288901 /* balotCalc.app */,
+				0C0472451FBABD5100288901 /* balotCalcTests.xctest */,
+				0C0472501FBABD5100288901 /* balotCalcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C0472301FBABD5000288901 /* balotCalc */ = {
+			isa = PBXGroup;
+			children = (
+				0C0472311FBABD5000288901 /* AppDelegate.swift */,
+				0C0472331FBABD5000288901 /* ViewController.swift */,
+				0C0472351FBABD5100288901 /* Main.storyboard */,
+				0C04723B1FBABD5100288901 /* Assets.xcassets */,
+				0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */,
+				0C0472401FBABD5100288901 /* Info.plist */,
+				0C0472381FBABD5100288901 /* balotCalc.xcdatamodeld */,
+			);
+			path = balotCalc;
+			sourceTree = "<group>";
+		};
+		0C0472481FBABD5100288901 /* balotCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C0472491FBABD5100288901 /* balotCalcTests.swift */,
+				0C04724B1FBABD5100288901 /* Info.plist */,
+			);
+			path = balotCalcTests;
+			sourceTree = "<group>";
+		};
+		0C0472531FBABD5100288901 /* balotCalcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0C0472541FBABD5100288901 /* balotCalcUITests.swift */,
+				0C0472561FBABD5100288901 /* Info.plist */,
+			);
+			path = balotCalcUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C04722D1FBABD5000288901 /* balotCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C0472591FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalc" */;
+			buildPhases = (
+				0C04722A1FBABD5000288901 /* Sources */,
+				0C04722B1FBABD5000288901 /* Frameworks */,
+				0C04722C1FBABD5000288901 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = balotCalc;
+			productName = balotCalc;
+			productReference = 0C04722E1FBABD5000288901 /* balotCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C0472441FBABD5100288901 /* balotCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C04725C1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcTests" */;
+			buildPhases = (
+				0C0472411FBABD5100288901 /* Sources */,
+				0C0472421FBABD5100288901 /* Frameworks */,
+				0C0472431FBABD5100288901 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C0472471FBABD5100288901 /* PBXTargetDependency */,
+			);
+			name = balotCalcTests;
+			productName = balotCalcTests;
+			productReference = 0C0472451FBABD5100288901 /* balotCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C04724F1FBABD5100288901 /* balotCalcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C04725F1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcUITests" */;
+			buildPhases = (
+				0C04724C1FBABD5100288901 /* Sources */,
+				0C04724D1FBABD5100288901 /* Frameworks */,
+				0C04724E1FBABD5100288901 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C0472521FBABD5100288901 /* PBXTargetDependency */,
+			);
+			name = balotCalcUITests;
+			productName = balotCalcUITests;
+			productReference = 0C0472501FBABD5100288901 /* balotCalcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C0472261FBABD5000288901 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = F3Deve;
+				TargetAttributes = {
+					0C04722D1FBABD5000288901 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					0C0472441FBABD5100288901 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C04722D1FBABD5000288901;
+					};
+					0C04724F1FBABD5100288901 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0C04722D1FBABD5000288901;
+					};
+				};
+			};
+			buildConfigurationList = 0C0472291FBABD5000288901 /* Build configuration list for PBXProject "balotCalc" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0C0472251FBABD5000288901;
+			productRefGroup = 0C04722F1FBABD5000288901 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C04722D1FBABD5000288901 /* balotCalc */,
+				0C0472441FBABD5100288901 /* balotCalcTests */,
+				0C04724F1FBABD5100288901 /* balotCalcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C04722C1FBABD5000288901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */,
+				0C04723C1FBABD5100288901 /* Assets.xcassets in Resources */,
+				0C0472371FBABD5100288901 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C0472431FBABD5100288901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C04724E1FBABD5100288901 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C04722A1FBABD5000288901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0472341FBABD5000288901 /* ViewController.swift in Sources */,
+				0C0472321FBABD5000288901 /* AppDelegate.swift in Sources */,
+				0C04723A1FBABD5100288901 /* balotCalc.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C0472411FBABD5100288901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C04724A1FBABD5100288901 /* balotCalcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C04724C1FBABD5100288901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C0472551FBABD5100288901 /* balotCalcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C0472471FBABD5100288901 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C04722D1FBABD5000288901 /* balotCalc */;
+			targetProxy = 0C0472461FBABD5100288901 /* PBXContainerItemProxy */;
+		};
+		0C0472521FBABD5100288901 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C04722D1FBABD5000288901 /* balotCalc */;
+			targetProxy = 0C0472511FBABD5100288901 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C0472351FBABD5100288901 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C0472361FBABD5100288901 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C04723E1FBABD5100288901 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C0472571FBABD5100288901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0C0472581FBABD5100288901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C04725A1FBABD5100288901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5Q8F86PF5;
+				INFOPLIST_FILE = balotCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0C04725B1FBABD5100288901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H5Q8F86PF5;
+				INFOPLIST_FILE = balotCalc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0C04725D1FBABD5100288901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKMK79A2J5;
+				INFOPLIST_FILE = balotCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/balotCalc.app/balotCalc";
+			};
+			name = Debug;
+		};
+		0C04725E1FBABD5100288901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKMK79A2J5;
+				INFOPLIST_FILE = balotCalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/balotCalc.app/balotCalc";
+			};
+			name = Release;
+		};
+		0C0472601FBABD5100288901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKMK79A2J5;
+				INFOPLIST_FILE = balotCalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = balotCalc;
+			};
+			name = Debug;
+		};
+		0C0472611FBABD5100288901 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LKMK79A2J5;
+				INFOPLIST_FILE = balotCalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.f3deve.balotCalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = balotCalc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C0472291FBABD5000288901 /* Build configuration list for PBXProject "balotCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0472571FBABD5100288901 /* Debug */,
+				0C0472581FBABD5100288901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C0472591FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C04725A1FBABD5100288901 /* Debug */,
+				0C04725B1FBABD5100288901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C04725C1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C04725D1FBABD5100288901 /* Debug */,
+				0C04725E1FBABD5100288901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C04725F1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C0472601FBABD5100288901 /* Debug */,
+				0C0472611FBABD5100288901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0C0472381FBABD5100288901 /* balotCalc.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0C0472391FBABD5100288901 /* balotCalc.xcdatamodel */,
+			);
+			currentVersion = 0C0472391FBABD5100288901 /* balotCalc.xcdatamodel */;
+			path = balotCalc.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 0C0472261FBABD5000288901 /* Project object */;
+}
