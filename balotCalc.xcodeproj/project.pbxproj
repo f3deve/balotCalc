@@ -15,6 +15,10 @@
 		0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */; };
 		0C04724A1FBABD5100288901 /* balotCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472491FBABD5100288901 /* balotCalcTests.swift */; };
 		0C0472551FBABD5100288901 /* balotCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472541FBABD5100288901 /* balotCalcUITests.swift */; };
+		0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C0472661FBAC25A00288901 /* GoogleService-Info.plist */; };
+		1D4406D701E0EAF15D4923E7 /* Pods_balotCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */; };
+		22F440AD532AE71A03A701B5 /* Pods_balotCalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D485C7D506684EC528DFC1 /* Pods_balotCalcUITests.framework */; };
+		E05085F64344D316319701A5 /* Pods_balotCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,16 @@
 		0C0472501FBABD5100288901 /* balotCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = balotCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0472541FBABD5100288901 /* balotCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balotCalcUITests.swift; sourceTree = "<group>"; };
 		0C0472561FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C0472661FBAC25A00288901 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B6F50FE551CB1793E267921 /* Pods-balotCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests.release.xcconfig"; sourceTree = "<group>"; };
+		86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93D485C7D506684EC528DFC1 /* Pods_balotCalcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		969F32064317E19A4554DAFD /* Pods-balotCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalc.release.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc.release.xcconfig"; sourceTree = "<group>"; };
+		B0AC4FADD2C922376A6B9CDF /* Pods-balotCalcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcUITests/Pods-balotCalcUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B31EA6E557735278161D0911 /* Pods-balotCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		BACAF3DA4BAAF5C453CCD45F /* Pods-balotCalcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcUITests/Pods-balotCalcUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DCB4CA67117933B655E50FD7 /* Pods-balotCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05085F64344D316319701A5 /* Pods_balotCalc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4406D701E0EAF15D4923E7 /* Pods_balotCalcTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F440AD532AE71A03A701B5 /* Pods_balotCalcUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				0C0472481FBABD5100288901 /* balotCalcTests */,
 				0C0472531FBABD5100288901 /* balotCalcUITests */,
 				0C04722F1FBABD5000288901 /* Products */,
+				A4B414681DDC20C99AD919EC /* Pods */,
+				6EA3E422869CF313AA0B400C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +124,7 @@
 				0C04723B1FBABD5100288901 /* Assets.xcassets */,
 				0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */,
 				0C0472401FBABD5100288901 /* Info.plist */,
+				0C0472661FBAC25A00288901 /* GoogleService-Info.plist */,
 				0C0472381FBABD5100288901 /* balotCalc.xcdatamodeld */,
 			);
 			path = balotCalc;
@@ -128,6 +148,29 @@
 			path = balotCalcUITests;
 			sourceTree = "<group>";
 		};
+		6EA3E422869CF313AA0B400C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */,
+				86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */,
+				93D485C7D506684EC528DFC1 /* Pods_balotCalcUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4B414681DDC20C99AD919EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B31EA6E557735278161D0911 /* Pods-balotCalc.debug.xcconfig */,
+				969F32064317E19A4554DAFD /* Pods-balotCalc.release.xcconfig */,
+				DCB4CA67117933B655E50FD7 /* Pods-balotCalcTests.debug.xcconfig */,
+				6B6F50FE551CB1793E267921 /* Pods-balotCalcTests.release.xcconfig */,
+				B0AC4FADD2C922376A6B9CDF /* Pods-balotCalcUITests.debug.xcconfig */,
+				BACAF3DA4BAAF5C453CCD45F /* Pods-balotCalcUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C0472591FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalc" */;
 			buildPhases = (
+				A4FC0F92A7114416EA0B7FA3 /* [CP] Check Pods Manifest.lock */,
 				0C04722A1FBABD5000288901 /* Sources */,
 				0C04722B1FBABD5000288901 /* Frameworks */,
 				0C04722C1FBABD5000288901 /* Resources */,
+				95F9A4E35375EFED2FF9D07A /* [CP] Embed Pods Frameworks */,
+				82E5CD2E6335BB6B6A3CDC38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C04725C1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcTests" */;
 			buildPhases = (
+				C6E42149CE29A938B80F2A7F /* [CP] Check Pods Manifest.lock */,
 				0C0472411FBABD5100288901 /* Sources */,
 				0C0472421FBABD5100288901 /* Frameworks */,
 				0C0472431FBABD5100288901 /* Resources */,
+				442CE93FDE8B7B723CF7123C /* [CP] Embed Pods Frameworks */,
+				2536D055272023AFC2E938E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C04725F1FBABD5100288901 /* Build configuration list for PBXNativeTarget "balotCalcUITests" */;
 			buildPhases = (
+				75F432312E867E87D73FDB1D /* [CP] Check Pods Manifest.lock */,
 				0C04724C1FBABD5100288901 /* Sources */,
 				0C04724D1FBABD5100288901 /* Frameworks */,
 				0C04724E1FBABD5100288901 /* Resources */,
+				5158D61B4B598DDCC4A421D9 /* [CP] Embed Pods Frameworks */,
+				C2B674A9E2D2F307C2D17B18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */,
+				0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */,
 				0C04723C1FBABD5100288901 /* Assets.xcassets in Resources */,
 				0C0472371FBABD5100288901 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +309,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2536D055272023AFC2E938E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		442CE93FDE8B7B723CF7123C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5158D61B4B598DDCC4A421D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalcUITests/Pods-balotCalcUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75F432312E867E87D73FDB1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-balotCalcUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E5CD2E6335BB6B6A3CDC38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95F9A4E35375EFED2FF9D07A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4FC0F92A7114416EA0B7FA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-balotCalc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B674A9E2D2F307C2D17B18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-balotCalcUITests/Pods-balotCalcUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E42149CE29A938B80F2A7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-balotCalcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C04722A1FBABD5000288901 /* Sources */ = {
@@ -428,6 +633,7 @@
 		};
 		0C04725A1FBABD5100288901 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B31EA6E557735278161D0911 /* Pods-balotCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +649,7 @@
 		};
 		0C04725B1FBABD5100288901 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 969F32064317E19A4554DAFD /* Pods-balotCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +665,7 @@
 		};
 		0C04725D1FBABD5100288901 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB4CA67117933B655E50FD7 /* Pods-balotCalcTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +683,7 @@
 		};
 		0C04725E1FBABD5100288901 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B6F50FE551CB1793E267921 /* Pods-balotCalcTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +701,7 @@
 		};
 		0C0472601FBABD5100288901 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AC4FADD2C922376A6B9CDF /* Pods-balotCalcUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +718,7 @@
 		};
 		0C0472611FBABD5100288901 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BACAF3DA4BAAF5C453CCD45F /* Pods-balotCalcUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

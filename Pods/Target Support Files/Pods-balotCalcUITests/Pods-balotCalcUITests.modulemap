@@ -1,0 +1,6 @@
+framework module Pods_balotCalcUITests {
+  umbrella header "Pods-balotCalcUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

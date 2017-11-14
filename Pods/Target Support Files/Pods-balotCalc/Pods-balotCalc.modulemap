@@ -1,0 +1,6 @@
+framework module Pods_balotCalc {
+  umbrella header "Pods-balotCalc-umbrella.h"
+
+  export *
+  module * { export * }
+}
