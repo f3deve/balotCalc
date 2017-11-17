@@ -40,7 +40,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         //To move back and forth
         handleTextField()
-        //scrollToBottom()
     }
     
     //To dismiss keyboard
@@ -65,7 +64,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     //Still working on it
     func scrollToBottom(){
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.main.async {
             let indexPath_1 = IndexPath(row: (self.ourScoresArray.count-1), section: 0)
             let indexPath_2 = IndexPath(row: (self.theirScoresArray.count-1), section: 0)
             self.ScoresTableView.scrollToRow(at: indexPath_1, at: .bottom, animated: true)
@@ -86,6 +85,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         return cell
     }
     
+    //Still working:
+    // alert message to confirm and check the current score(if it is more than 100 then this button is disable)
     @IBAction func startAt52(_ sender: Any) {
         if(startAt52outlet.title == "ترصيد"){
             startAt52outlet.title = "بدون ترصيد"
@@ -115,7 +116,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     @IBAction func submitScoreBtn(_ sender: Any) {
-        //Just to make sure no error when there are no values in the text fields
+        //Just to make sure no error when there are no values in the text field
         isItEmpty()
         
         //Adding the new values to the table view
@@ -127,6 +128,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         ScoresTableView.reloadData()
         ourTextField.text!.removeAll()
         theirTextField.text!.removeAll()
+        dismissKeyboard()
+        scrollToBottom() //To show the table view from the bottom
     }
     
     /*
@@ -139,20 +142,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         if(ourTextField.text!.isEmpty && theirTextField.text!.isEmpty){ return }
         else if (ourTextField.text!.isEmpty) { ourTextField.text = "0" }
         else if (theirTextField.text!.isEmpty) { theirTextField.text = "0" }
-    }
-    
-    /*
-     We cannot add value of type string so in this function:
-     - change the text field type and label type to int to add them up
-     - then change their total to string to make it the new currentCalcScore label
-     */
-    func calcCurrentScore(textFieldtxt: String, CurrentScoreLabel: String) -> String {
-        let intTextFieldtxt: Int = Int(textFieldtxt)!
-        let intCurrentScoreLabel: Int = Int(CurrentScoreLabel)!
-        
-        let total = intTextFieldtxt + intCurrentScoreLabel
-        let totalString: String = String(total)
-        return totalString
     }
     
     /*
@@ -170,6 +159,21 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         theirCurrentCulcScore.text = theirTotal
     }
     
+    /*
+     We cannot add value of type string so in this function:
+     - change the text field type and label type to int to add them up
+     - then change their total to string to make it the new currentCalcScore label
+     */
+    func calcCurrentScore(textFieldtxt: String, CurrentScoreLabel: String) -> String {
+        let intTextFieldtxt: Int = Int(textFieldtxt)!
+        let intCurrentScoreLabel: Int = Int(CurrentScoreLabel)!
+        
+        let total = intTextFieldtxt + intCurrentScoreLabel
+        let totalString: String = String(total)
+        return totalString
+    }
+    
     @IBAction func newGameBtn(_ sender: Any) {
+        
     }
 }
