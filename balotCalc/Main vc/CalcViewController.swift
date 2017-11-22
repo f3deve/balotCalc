@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import PCLBlurEffectAlert
 import Firebase
 import GoogleMobileAds
 
-class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, GADBannerViewDelegate {
     
     @IBOutlet weak var ourCurrentCulcScore: UILabel!
     @IBOutlet weak var theirCurrentCulcScore: UILabel!
@@ -21,8 +22,13 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var startAt52outlet: UIBarButtonItem!
     @IBOutlet weak var ScoresTableView: UITableView!
     
+    var adView:GADBannerView!
     var ourScoresArray = [String]()
     var theirScoresArray = [String]()
+    
+    let winArray = ["مبروك يا وحش 🎉", "مسكتوهم زاوية 😅", "فيه اثنين افضل؟ 🙄", "فوز مستحق 😍"]
+    let lostArray = ["خيرها بغيرها", "هاردلك", "الجايات احسن", "وش هالمستوى؟ 😧"]
+    let messageArray = ["كرها ما يضرها", "العب مره ثانية ", "خذلك قيم ثاني", "صكة جديدة"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,36 +46,15 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         
         //To move back and forth
         handleTextField()
-    }
-    
-    //To dismiss keyboard
-    @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-    
-    func handleTextField(){
-        ourTextField.addTarget(self, action: #selector(CalcViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
-        theirTextField.addTarget(self, action: #selector(CalcViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
-    }
-    
-    @objc func textFieldDidChange(){
-        if ( ourTextField.text!.count == 2){
-            theirTextField.becomeFirstResponder()
-        }
-        if ( theirTextField.text!.count == 2){
-            ourTextField.becomeFirstResponder()
-        }
-    }
-    
-    //Still working on it
-    func scrollToBottom(){
-        DispatchQueue.main.async {
-            let indexPath_1 = IndexPath(row: (self.ourScoresArray.count-1), section: 0)
-            let indexPath_2 = IndexPath(row: (self.theirScoresArray.count-1), section: 0)
-            self.ScoresTableView.scrollToRow(at: indexPath_1, at: .bottom, animated: true)
-            self.ScoresTableView.scrollToRow(at: indexPath_2, at: .bottom, animated: true)
-        }
+        
+        //Adding the googleAd
+        adView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adView.adUnitID = "ca-app-pub-8760463257793738/6032284835"
+        adView.rootViewController = self
+        let request = GADRequest()
+        adView.load(request)
+        adView.frame = CGRect(x: 0, y: view.bounds.height - adView.frame.size.height, width: adView.frame.size.width, height: adView.frame.size.height)
+        self.view.addSubview(adView)
     }
     
     //To set number of rows of the table view
@@ -116,8 +101,15 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     @IBAction func submitScoreBtn(_ sender: Any) {
-        //Just to make sure no error when there are no values in the text field
-        isItEmpty()
+        /*
+         We cannot perform with null value, if we do then it will crach so
+         in order to avoid that, we need to make sure there is no null value
+         and if so in both of the text fields then we do not perform and if just
+         either of them then when out its value to zero
+         */
+        if(ourTextField.text!.isEmpty && theirTextField.text!.isEmpty){ return }
+        else if (ourTextField.text!.isEmpty) { ourTextField.text = "0" }
+        else if (theirTextField.text!.isEmpty) { theirTextField.text = "0" }
         
         //Adding the new values to the table view
         ourScoresArray.append(ourTextField.text!)
@@ -130,18 +122,53 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         theirTextField.text!.removeAll()
         dismissKeyboard()
         scrollToBottom() //To show the table view from the bottom
+        
+        calcThewinner()
     }
     
-    /*
-     We cannot perform with null value, if we do then it will crach so
-     in order to avoid that, we need to make sure there is no null value
-     and if so in both of the text fields then we do not perform and if just
-     either of them then when out its value to zero
-     */
-    func isItEmpty(){
-        if(ourTextField.text!.isEmpty && theirTextField.text!.isEmpty){ return }
-        else if (ourTextField.text!.isEmpty) { ourTextField.text = "0" }
-        else if (theirTextField.text!.isEmpty) { theirTextField.text = "0" }
+    @IBAction func newGameBtn(_ sender: Any) {
+        alertMessageDisplay(title: "صكة جديدة 🙄!!", titleFontSize: 22, message: "", messageFontSize: 0, buttonHeight: 45, margin: 15) {            self.ourCurrentCulcScore.text = "0"
+            self.theirCurrentCulcScore.text = "0"
+            self.ourScoresArray.removeAll()
+            self.theirScoresArray.removeAll()
+            self.ScoresTableView.reloadData()
+            self.ourTextField?.text?.removeAll()
+            self.theirTextField?.text?.removeAll()
+        }
+    }
+    
+    // ----------------------------------------------------------------- //
+    //Functions start from here
+    
+    //To dismiss keyboard
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func handleTextField(){
+        ourTextField.addTarget(self, action: #selector(CalcViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        theirTextField.addTarget(self, action: #selector(CalcViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+    }
+    
+    //Moving back and forth between textfields
+    @objc func textFieldDidChange(){
+        if ( ourTextField.text!.count == 2){
+            theirTextField.becomeFirstResponder()
+        }
+        if ( theirTextField.text!.count == 2){
+            ourTextField.becomeFirstResponder()
+        }
+    }
+    
+    //Still working on it
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath_1 = IndexPath(row: (self.ourScoresArray.count-1), section: 0)
+            let indexPath_2 = IndexPath(row: (self.theirScoresArray.count-1), section: 0)
+            self.ScoresTableView.scrollToRow(at: indexPath_1, at: .bottom, animated: true)
+            self.ScoresTableView.scrollToRow(at: indexPath_2, at: .bottom, animated: true)
+        }
     }
     
     /*
@@ -173,7 +200,78 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         return totalString
     }
     
-    @IBAction func newGameBtn(_ sender: Any) {
+    /*
+     We need to know who reach the score of 152 or above first to decide who is the winner
+     but if both teams reach there at the same time with the same score, then the game is still on
+     otherwise, the winner is the one with higher score
+     */
+    func calcThewinner(){
+        var titleDisplay: String = ""
+        var messageDiplay: String = ""
         
+        let intOurCurrentCulcScore = Int(ourCurrentCulcScore.text!)!
+        let intTheirCurrentCulcScore = Int(theirCurrentCulcScore.text!)!
+        
+        if(intOurCurrentCulcScore >= 152 || intTheirCurrentCulcScore >= 152){
+            let randomWin = Int(arc4random_uniform(UInt32(winArray.count)))
+            let randomLost = Int(arc4random_uniform(UInt32(lostArray.count)))
+            let randomMessage = Int(arc4random_uniform(UInt32(lostArray.count)))
+            
+            if(intOurCurrentCulcScore > intTheirCurrentCulcScore){
+                titleDisplay = winArray[randomWin]
+                messageDiplay = messageArray[randomMessage]
+            } else if(intOurCurrentCulcScore == intTheirCurrentCulcScore) {
+                return
+            } else {
+                titleDisplay = lostArray[randomLost]
+                messageDiplay = messageArray[randomMessage]
+            }
+            alertMessageDisplay(title: titleDisplay, titleFontSize: 22, message: messageDiplay, messageFontSize: 24, buttonHeight: 50, margin: 10, onAction: {
+                self.ourCurrentCulcScore.text = "0"
+                self.theirCurrentCulcScore.text = "0"
+                self.ourScoresArray.removeAll()
+                self.theirScoresArray.removeAll()
+                self.ScoresTableView.reloadData()
+                self.ourTextField?.text?.removeAll()
+                self.theirTextField?.text?.removeAll()
+            })
+        }
+    }
+    
+    //Custom alert message to confirm a new game
+    func alertMessageDisplay(title: String?, titleFontSize: CGFloat, message: String?, messageFontSize: CGFloat, buttonHeight: CGFloat, margin: CGFloat, onAction: @escaping() -> Void){
+        let alertMessage = PCLBlurEffectAlert.Controller(title: title, message: message, effect: UIBlurEffect(style: .extraLight), style: .alert)
+        
+        //Adding an action buttons
+        alertMessage.addAction(PCLBlurEffectAlert.Action(title: "لا", style:.cancel, handler: nil))
+        alertMessage.addAction(PCLBlurEffectAlert.Action(title: "ايه", style: .default, handler: { (action) in
+            onAction()
+        }))
+        
+        //Designing the alert message
+        alertMessage.configure(cornerRadius: 20)
+        alertMessage.configure(titleColor: UIColor.black)
+        alertMessage.configure(messageColor: UIColor.black)
+        alertMessage.configure(overlayBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.4))
+        alertMessage.configure(buttonTextColor: [.default: UIColor.blue,
+                                                 .destructive: UIColor.blue,
+                                                 .cancel: UIColor.blue])
+        alertMessage.configure(titleFont: UIFont.systemFont(ofSize: titleFontSize))
+        alertMessage.configure(messageFont: UIFont(name: "(A) Arslan Wessam A", size: messageFontSize)!)
+        alertMessage.configure(thin: 0.5)
+        alertMessage.configure(buttonHeight: buttonHeight)
+        alertMessage.configure(margin: margin)
+        alertMessage.configure(buttonFont: [.default: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
+                                            .destructive: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
+                                            .cancel: UIFont(name: "(A) Arslan Wessam A", size: 28)!])
+        alertMessage.show()
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        adView.isHidden = true
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        adView.isHidden = false
     }
 }

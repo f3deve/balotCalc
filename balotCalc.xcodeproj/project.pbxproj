@@ -16,10 +16,10 @@
 		0C04724A1FBABD5100288901 /* balotCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472491FBABD5100288901 /* balotCalcTests.swift */; };
 		0C0472551FBABD5100288901 /* balotCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472541FBABD5100288901 /* balotCalcUITests.swift */; };
 		0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C0472661FBAC25A00288901 /* GoogleService-Info.plist */; };
-		0C562F681FBAD33000558176 /* A-Arslan-Wessam-A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C562F671FBAD33000558176 /* A-Arslan-Wessam-A.ttf */; };
-		0C562F6A1FBAD34F00558176 /* www.Brushez.com-SC_AMEEN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C562F691FBAD34F00558176 /* www.Brushez.com-SC_AMEEN.ttf */; };
 		0C562F6F1FBAE31700558176 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C562F6E1FBAE31700558176 /* CalcViewController.swift */; };
 		0C562F731FBAE52F00558176 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C562F721FBAE52F00558176 /* ScoresTableViewCell.swift */; };
+		0CA964431FC4065300CF51FD /* A-Arslan-Wessam-A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */; };
+		0CA964451FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */; };
 		1D4406D701E0EAF15D4923E7 /* Pods_balotCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */; };
 		22F440AD532AE71A03A701B5 /* Pods_balotCalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D485C7D506684EC528DFC1 /* Pods_balotCalcUITests.framework */; };
 		E05085F64344D316319701A5 /* Pods_balotCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */; };
@@ -58,10 +58,10 @@
 		0C0472541FBABD5100288901 /* balotCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balotCalcUITests.swift; sourceTree = "<group>"; };
 		0C0472561FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C0472661FBAC25A00288901 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "balotCalc/supported items/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		0C562F671FBAD33000558176 /* A-Arslan-Wessam-A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-Arslan-Wessam-A.ttf"; path = "../../../../../../anshr/anshr/A-Arslan-Wessam-A.ttf"; sourceTree = "<group>"; };
-		0C562F691FBAD34F00558176 /* www.Brushez.com-SC_AMEEN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "www.Brushez.com-SC_AMEEN.ttf"; path = "../../../../../../anshr/anshr/www.Brushez.com-SC_AMEEN.ttf"; sourceTree = "<group>"; };
 		0C562F6E1FBAE31700558176 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
 		0C562F721FBAE52F00558176 /* ScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewCell.swift; sourceTree = "<group>"; };
+		0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-Arslan-Wessam-A.ttf"; path = "../../../../../anshr/anshr/A-Arslan-Wessam-A.ttf"; sourceTree = "<group>"; };
+		0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "www.Brushez.com-SC_AMEEN.ttf"; path = "../../../../../anshr/anshr/www.Brushez.com-SC_AMEEN.ttf"; sourceTree = "<group>"; };
 		1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6F50FE551CB1793E267921 /* Pods-balotCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests.release.xcconfig"; sourceTree = "<group>"; };
 		86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,8 +170,8 @@
 		0C562F661FBAD2FD00558176 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0C562F671FBAD33000558176 /* A-Arslan-Wessam-A.ttf */,
-				0C562F691FBAD34F00558176 /* www.Brushez.com-SC_AMEEN.ttf */,
+				0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */,
+				0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -334,8 +334,8 @@
 				0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */,
 				0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */,
 				0C04723C1FBABD5100288901 /* Assets.xcassets in Resources */,
-				0C562F6A1FBAD34F00558176 /* www.Brushez.com-SC_AMEEN.ttf in Resources */,
-				0C562F681FBAD33000558176 /* A-Arslan-Wessam-A.ttf in Resources */,
+				0CA964451FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf in Resources */,
+				0CA964431FC4065300CF51FD /* A-Arslan-Wessam-A.ttf in Resources */,
 				0C0472371FBABD5100288901 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,11 +443,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-balotCalc/Pods-balotCalc-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PCLBlurEffectAlert/PCLBlurEffectAlert.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PCLBlurEffectAlert.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

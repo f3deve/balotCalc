@@ -6,8 +6,9 @@ target 'balotCalc' do
   use_frameworks!
 
   # Pods for balotCalc
-  pod 'Firebase/Core'
+  pod "Firebase/Core"
   pod "Firebase/AdMob"
+  pod "PCLBlurEffectAlert"
 
   target 'balotCalcTests' do
     inherit! :search_paths
