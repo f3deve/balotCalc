@@ -127,7 +127,8 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     @IBAction func newGameBtn(_ sender: Any) {
-        alertMessageDisplay(title: "صكة جديدة 🙄!!", titleFontSize: 22, message: "", messageFontSize: 0, buttonHeight: 45, margin: 15) {            self.ourCurrentCulcScore.text = "0"
+        alertMessageDisplay(title: "صكة جديدة 🙄!!", titleFontSize: 22, message: "", messageFontSize: 0, buttonHeight: 45, margin: 15) {
+            self.ourCurrentCulcScore.text = "0"
             self.theirCurrentCulcScore.text = "0"
             self.ourScoresArray.removeAll()
             self.theirScoresArray.removeAll()
