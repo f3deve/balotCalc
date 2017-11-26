@@ -16,6 +16,10 @@
 		0C04724A1FBABD5100288901 /* balotCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472491FBABD5100288901 /* balotCalcTests.swift */; };
 		0C0472551FBABD5100288901 /* balotCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0472541FBABD5100288901 /* balotCalcUITests.swift */; };
 		0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C0472661FBAC25A00288901 /* GoogleService-Info.plist */; };
+		0C3540E21FC949870004BA9B /* HitJTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3540E11FC949870004BA9B /* HitJTableViewCell.swift */; };
+		0C3540E41FC949B30004BA9B /* HitJViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3540E31FC949B30004BA9B /* HitJViewController.swift */; };
+		0C3540E61FC949CF0004BA9B /* HitJResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3540E51FC949CF0004BA9B /* HitJResultViewController.swift */; };
+		0C3540EA1FC95B5D0004BA9B /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3540E91FC95B5D0004BA9B /* AlertMessage.swift */; };
 		0C562F6F1FBAE31700558176 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C562F6E1FBAE31700558176 /* CalcViewController.swift */; };
 		0C562F731FBAE52F00558176 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C562F721FBAE52F00558176 /* ScoresTableViewCell.swift */; };
 		0CA964431FC4065300CF51FD /* A-Arslan-Wessam-A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */; };
@@ -58,6 +62,10 @@
 		0C0472541FBABD5100288901 /* balotCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = balotCalcUITests.swift; sourceTree = "<group>"; };
 		0C0472561FBABD5100288901 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C0472661FBAC25A00288901 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "balotCalc/supported items/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0C3540E11FC949870004BA9B /* HitJTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitJTableViewCell.swift; sourceTree = "<group>"; };
+		0C3540E31FC949B30004BA9B /* HitJViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitJViewController.swift; sourceTree = "<group>"; };
+		0C3540E51FC949CF0004BA9B /* HitJResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitJResultViewController.swift; sourceTree = "<group>"; };
+		0C3540E91FC95B5D0004BA9B /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		0C562F6E1FBAE31700558176 /* CalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
 		0C562F721FBAE52F00558176 /* ScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTableViewCell.swift; sourceTree = "<group>"; };
 		0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-Arslan-Wessam-A.ttf"; path = "../../../../../anshr/anshr/A-Arslan-Wessam-A.ttf"; sourceTree = "<group>"; };
@@ -133,6 +141,7 @@
 				0C562F6B1FBAD3CD00558176 /* Main vc */,
 				0C562F6C1FBAD3DA00558176 /* hit j */,
 				0C562F651FBAD2CE00558176 /* supported items */,
+				0C3540E91FC95B5D0004BA9B /* AlertMessage.swift */,
 			);
 			path = balotCalc;
 			sourceTree = "<group>";
@@ -188,6 +197,9 @@
 		0C562F6C1FBAD3DA00558176 /* hit j */ = {
 			isa = PBXGroup;
 			children = (
+				0C3540E31FC949B30004BA9B /* HitJViewController.swift */,
+				0C3540E11FC949870004BA9B /* HitJTableViewCell.swift */,
+				0C3540E51FC949CF0004BA9B /* HitJResultViewController.swift */,
 			);
 			path = "hit j";
 			sourceTree = "<group>";
@@ -516,9 +528,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C0472341FBABD5000288901 /* ViewController.swift in Sources */,
+				0C3540EA1FC95B5D0004BA9B /* AlertMessage.swift in Sources */,
 				0C562F6F1FBAE31700558176 /* CalcViewController.swift in Sources */,
+				0C3540E21FC949870004BA9B /* HitJTableViewCell.swift in Sources */,
+				0C3540E41FC949B30004BA9B /* HitJViewController.swift in Sources */,
 				0C0472321FBABD5000288901 /* AppDelegate.swift in Sources */,
 				0C562F731FBAE52F00558176 /* ScoresTableViewCell.swift in Sources */,
+				0C3540E61FC949CF0004BA9B /* HitJResultViewController.swift in Sources */,
 				0C04723A1FBABD5100288901 /* balotCalc.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

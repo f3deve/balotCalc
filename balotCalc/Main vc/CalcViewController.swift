@@ -127,7 +127,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     }
     
     @IBAction func newGameBtn(_ sender: Any) {
-        alertMessageDisplay(title: "صكة جديدة 🙄!!", titleFontSize: 22, message: "", messageFontSize: 0, buttonHeight: 45, margin: 15) {
+        AlertMessage.alertMessageDisplay2Actions(title: "صكة جديدة 🙄!!", message: "", buttonHeight: 45, margin: 15) {
             self.ourCurrentCulcScore.text = "0"
             self.theirCurrentCulcScore.text = "0"
             self.ourScoresArray.removeAll()
@@ -227,7 +227,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 titleDisplay = lostArray[randomLost]
                 messageDiplay = messageArray[randomMessage]
             }
-            alertMessageDisplay(title: titleDisplay, titleFontSize: 22, message: messageDiplay, messageFontSize: 24, buttonHeight: 50, margin: 10, onAction: {
+            AlertMessage.alertMessageDisplay2Actions(title: titleDisplay, message: messageDiplay, buttonHeight: 50, margin: 10, onAction: {
                 self.ourCurrentCulcScore.text = "0"
                 self.theirCurrentCulcScore.text = "0"
                 self.ourScoresArray.removeAll()
@@ -237,35 +237,6 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 self.theirTextField?.text?.removeAll()
             })
         }
-    }
-    
-    //Custom alert message to confirm a new game
-    func alertMessageDisplay(title: String?, titleFontSize: CGFloat, message: String?, messageFontSize: CGFloat, buttonHeight: CGFloat, margin: CGFloat, onAction: @escaping() -> Void){
-        let alertMessage = PCLBlurEffectAlert.Controller(title: title, message: message, effect: UIBlurEffect(style: .extraLight), style: .alert)
-        
-        //Adding an action buttons
-        alertMessage.addAction(PCLBlurEffectAlert.Action(title: "لا", style:.cancel, handler: nil))
-        alertMessage.addAction(PCLBlurEffectAlert.Action(title: "ايه", style: .default, handler: { (action) in
-            onAction()
-        }))
-        
-        //Designing the alert message
-        alertMessage.configure(cornerRadius: 20)
-        alertMessage.configure(titleColor: UIColor.black)
-        alertMessage.configure(messageColor: UIColor.black)
-        alertMessage.configure(overlayBackgroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.4))
-        alertMessage.configure(buttonTextColor: [.default: UIColor.blue,
-                                                 .destructive: UIColor.blue,
-                                                 .cancel: UIColor.blue])
-        alertMessage.configure(titleFont: UIFont.systemFont(ofSize: titleFontSize))
-        alertMessage.configure(messageFont: UIFont(name: "(A) Arslan Wessam A", size: messageFontSize)!)
-        alertMessage.configure(thin: 0.5)
-        alertMessage.configure(buttonHeight: buttonHeight)
-        alertMessage.configure(margin: margin)
-        alertMessage.configure(buttonFont: [.default: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .destructive: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .cancel: UIFont(name: "(A) Arslan Wessam A", size: 28)!])
-        alertMessage.show()
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
