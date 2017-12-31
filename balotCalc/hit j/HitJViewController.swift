@@ -11,11 +11,13 @@ import PCLBlurEffectAlert
 import GoogleMobileAds
 import Firebase
 
-class HitJViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class HitJViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, GADBannerViewDelegate {
     @IBOutlet weak var EnterNameTextField: UITextField!
     @IBOutlet weak var playersTableView: UITableView!
+    @IBOutlet weak var MenuBtn: UIBarButtonItem!
     
     var playersArray = [String]()
+    var adView:GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,20 @@ class HitJViewController: UIViewController, UITableViewDelegate, UITableViewData
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(HitJViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        //Adding the googleAd
+        adView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adView.adUnitID = "ca-app-pub-8760463257793738/6032284835"
+        adView.rootViewController = self
+        let request = GADRequest()
+        adView.load(request)
+        adView.frame = CGRect(x: 0, y: view.bounds.height - adView.frame.size.height, width: adView.frame.size.width, height: adView.frame.size.height)
+        self.view.addSubview(adView)
+        
+        //To remove the title of the bar botton
         setCustomBackItem()
+        
+        //To show the slide menu
+        sideMenus ()
     }
     
     //Adding the rows
@@ -116,5 +131,22 @@ class HitJViewController: UIViewController, UITableViewDelegate, UITableViewData
     //To make the back botton with no title
     func setCustomBackItem(){
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        adView.isHidden = true
+    }
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        adView.isHidden = false
+    }
+    
+    //To show the slide menu
+    func sideMenus () {
+        if revealViewController() != nil {
+            MenuBtn.target = revealViewController()
+            MenuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 }

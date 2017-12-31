@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PCLBlurEffectAlert
 import Firebase
 import GoogleMobileAds
 
@@ -21,6 +20,7 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     @IBOutlet weak var newGameBtnOutlet: UIButton!
     @IBOutlet weak var startAt52outlet: UIBarButtonItem!
     @IBOutlet weak var ScoresTableView: UITableView!
+    @IBOutlet weak var MenuBtn: UIBarButtonItem!
     
     var adView:GADBannerView!
     var ourScoresArray = [String]()
@@ -55,6 +55,9 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         adView.load(request)
         adView.frame = CGRect(x: 0, y: view.bounds.height - adView.frame.size.height, width: adView.frame.size.width, height: adView.frame.size.height)
         self.view.addSubview(adView)
+        
+        //To show the slide menu
+        sideMenus ()
     }
     
     //To set number of rows of the table view
@@ -245,5 +248,15 @@ class CalcViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         adView.isHidden = false
+    }
+    
+    //To show the slide menu
+    func sideMenus () {
+        if revealViewController() != nil {
+            MenuBtn.target = revealViewController()
+            MenuBtn.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
 }

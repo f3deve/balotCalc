@@ -7,8 +7,8 @@
 //
 
 import PCLBlurEffectAlert
+import UIKit
 class AlertMessage{
-    
     //Custom alert message to confirm a new game
     static func alertMessageDisplay2Actions(title: String?, message: String?, buttonHeight: CGFloat, margin: CGFloat, onAction: @escaping() -> Void){
         let alertMessage = PCLBlurEffectAlert.Controller(title: title, message: message, effect: UIBlurEffect(style: .extraLight), style: .alert)
