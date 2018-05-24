@@ -30,13 +30,15 @@ class SMViewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SMTableViewCell
-        cell.listLabel.text = listArray[indexPath.row]
-        cell.imageSample.image = UIImage(named: imageSample[indexPath.row])
-        
-        cell.selectionStyle = .none
-        cell.backgroundColor = UIColor.clear
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? SMTableViewCell {
+            cell.listLabel.text = listArray[indexPath.row]
+            cell.imageSample.image = UIImage(named: imageSample[indexPath.row])
+            
+            cell.selectionStyle = .none
+            cell.backgroundColor = UIColor.clear
+            return cell
+        }
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -77,7 +79,8 @@ class SMTableViewCell: UITableViewCell{
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.white
         label.textAlignment = .right
-        label.font = UIFont(name: "SC_AMEEN", size: 22)
+        label.font = UIFont.systemFont(ofSize: 22)
+            //UIFont(name: "SC_AMEEN", size: 22)
         return label
     }()
     

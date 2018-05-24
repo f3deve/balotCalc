@@ -24,19 +24,19 @@ class HitJResultViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         
         let random1 = Int(arc4random_uniform(UInt32(players_array.count)))
-        player1!.text = players_array[random1]
+        player1.text = players_array[random1]
         players_array.remove(at: random1)
         
         let random2 = Int(arc4random_uniform(UInt32(players_array.count)))
-        player2!.text = players_array[random2]
+        player2.text = players_array[random2]
         players_array.remove(at: random2)
         
         let random3 = Int(arc4random_uniform(UInt32(players_array.count)))
-        player3!.text = players_array[random3]
+        player3.text = players_array[random3]
         players_array.remove(at: random3)
         
         let random4 = Int(arc4random_uniform(UInt32(players_array.count)))
-        player4!.text = players_array[random4]
+        player4.text = players_array[random4]
         drawCardsLabel!.text = "التوزيع عند: \(players_array[random4])"
         
         //Adding the googleAd

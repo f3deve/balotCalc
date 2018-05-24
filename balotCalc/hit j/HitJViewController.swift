@@ -64,9 +64,11 @@ class HitJViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     //Adding the content of the rows
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HitJTableViewCell
-        cell.playerLabel.text = "\(indexPath.row + 1). \(playersArray[indexPath.row])"
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HitJTableViewCell{
+            cell.playerLabel.text = "\(indexPath.row + 1). \(playersArray[indexPath.row])"
+            return cell
+        }
+        return UITableViewCell()
     }
     //To make the row disable to be selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -114,18 +116,21 @@ class HitJViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //Adding players to the tableView
     func proformAction(){
-        if(EnterNameTextField.text!.isEmpty){
-            return
+        if let enterNameTextFieldTxt = EnterNameTextField.text {
+            if(enterNameTextFieldTxt.isEmpty){
+                return
+            }
+            playersArray.append(enterNameTextFieldTxt)
+            EnterNameTextField.text = ""
+            playersTableView.reloadData()
         }
-        playersArray.append(EnterNameTextField.text!)
-        EnterNameTextField.text!.removeAll()
-        playersTableView.reloadData()
     }
     
     //Passing the array information to another controller view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! HitJResultViewController
-        vc.players_array = playersArray
+        if let vc = segue.destination as? HitJResultViewController {
+            vc.players_array = playersArray
+        }
     }
     
     //To make the back botton with no title

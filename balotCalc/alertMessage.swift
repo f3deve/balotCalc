@@ -28,13 +28,14 @@ class AlertMessage{
                                                  .destructive: UIColor.blue,
                                                  .cancel: UIColor.blue])
         alertMessage.configure(titleFont: UIFont.systemFont(ofSize: 22))
-        alertMessage.configure(messageFont: UIFont(name: "(A) Arslan Wessam A", size: 24)!)
+        alertMessage.configure(messageFont: UIFont.systemFont(ofSize: 24))
+        //UIFont(name: "(A) Arslan Wessam A", size: 24)!
         alertMessage.configure(thin: 0.5)
         alertMessage.configure(buttonHeight: buttonHeight)
         alertMessage.configure(margin: margin)
-        alertMessage.configure(buttonFont: [.default: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .destructive: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .cancel: UIFont(name: "(A) Arslan Wessam A", size: 28)!])
+        alertMessage.configure(buttonFont: [.default: UIFont.systemFont(ofSize: 28),
+                                            .destructive: UIFont.systemFont(ofSize: 28),
+                                            .cancel: UIFont.systemFont(ofSize: 28)])
         alertMessage.show()
     }
     
@@ -53,13 +54,13 @@ class AlertMessage{
                                                  .destructive: UIColor.blue,
                                                  .cancel: UIColor.blue])
         alertMessage.configure(titleFont: UIFont.systemFont(ofSize: 22))
-        alertMessage.configure(messageFont: UIFont(name: "(A) Arslan Wessam A", size: 24)!)
+        alertMessage.configure(messageFont: UIFont.systemFont(ofSize: 24))
         alertMessage.configure(thin: 0.5)
         alertMessage.configure(buttonHeight: buttonHeight)
         alertMessage.configure(margin: margin)
-        alertMessage.configure(buttonFont: [.default: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .destructive: UIFont(name: "(A) Arslan Wessam A", size: 28)!,
-                                            .cancel: UIFont(name: "(A) Arslan Wessam A", size: 28)!])
+        alertMessage.configure(buttonFont: [.default: UIFont.systemFont(ofSize: 28),
+                                            .destructive: UIFont.systemFont(ofSize: 28),
+                                            .cancel: UIFont.systemFont(ofSize: 28)])
         alertMessage.show()
     }
 }

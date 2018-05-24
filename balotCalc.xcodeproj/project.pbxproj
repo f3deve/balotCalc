@@ -27,8 +27,6 @@
 		0C562F731FBAE52F00558176 /* ScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C562F721FBAE52F00558176 /* ScoresTableViewCell.swift */; };
 		0C586ABE1FCC008B0023871A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C586ABD1FCC008A0023871A /* SWRevealViewController.m */; };
 		0C5ED77F1FF75F52007F0AAA /* AboutUSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5ED77E1FF75F52007F0AAA /* AboutUSController.swift */; };
-		0CA964431FC4065300CF51FD /* A-Arslan-Wessam-A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */; };
-		0CA964451FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */; };
 		1D4406D701E0EAF15D4923E7 /* Pods_balotCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */; };
 		22F440AD532AE71A03A701B5 /* Pods_balotCalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D485C7D506684EC528DFC1 /* Pods_balotCalcUITests.framework */; };
 		E05085F64344D316319701A5 /* Pods_balotCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */; };
@@ -80,8 +78,6 @@
 		0C586ABC1FCC00890023871A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		0C586ABD1FCC008A0023871A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0C5ED77E1FF75F52007F0AAA /* AboutUSController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUSController.swift; sourceTree = "<group>"; };
-		0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-Arslan-Wessam-A.ttf"; path = "../../../../../anshr/anshr/A-Arslan-Wessam-A.ttf"; sourceTree = "<group>"; };
-		0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "www.Brushez.com-SC_AMEEN.ttf"; path = "../../../../../anshr/anshr/www.Brushez.com-SC_AMEEN.ttf"; sourceTree = "<group>"; };
 		1EFDAEF06B11844E54A5B825 /* Pods_balotCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6F50FE551CB1793E267921 /* Pods-balotCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-balotCalcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-balotCalcTests/Pods-balotCalcTests.release.xcconfig"; sourceTree = "<group>"; };
 		86B13E0CA3204B69B28B6EC4 /* Pods_balotCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_balotCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +186,6 @@
 		0C562F651FBAD2CE00558176 /* supported items */ = {
 			isa = PBXGroup;
 			children = (
-				0C562F661FBAD2FD00558176 /* fonts */,
 				0C04723B1FBABD5100288901 /* Assets.xcassets */,
 				0C04723D1FBABD5100288901 /* LaunchScreen.storyboard */,
 				0C0472661FBAC25A00288901 /* GoogleService-Info.plist */,
@@ -200,15 +195,6 @@
 				0C586ABB1FCC00870023871A /* balotCalc-Bridging-Header.h */,
 			);
 			path = "supported items";
-			sourceTree = "<group>";
-		};
-		0C562F661FBAD2FD00558176 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				0CA964421FC4065200CF51FD /* A-Arslan-Wessam-A.ttf */,
-				0CA964441FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf */,
-			);
-			path = fonts;
 			sourceTree = "<group>";
 		};
 		0C562F6B1FBAD3CD00558176 /* Main vc */ = {
@@ -390,8 +376,6 @@
 				0C04723F1FBABD5100288901 /* LaunchScreen.storyboard in Resources */,
 				0C0472671FBAC25A00288901 /* GoogleService-Info.plist in Resources */,
 				0C04723C1FBABD5100288901 /* Assets.xcassets in Resources */,
-				0CA964451FC4067000CF51FD /* www.Brushez.com-SC_AMEEN.ttf in Resources */,
-				0CA964431FC4065300CF51FD /* A-Arslan-Wessam-A.ttf in Resources */,
 				0C0472371FBABD5100288901 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

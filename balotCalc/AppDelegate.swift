@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //To change the navigationbar's font
-        let navFont = UIFont(name: "(A) Arslan Wessam A", size: 28)!
+        let navFont = UIFont.systemFont(ofSize: 28)
+            //UIFont(name: "(A) Arslan Wessam A", size: 28)!
         let navigationFontAttributes = [NSAttributedStringKey.font: navFont]
         UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes
         UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes, for: .normal)
